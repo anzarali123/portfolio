@@ -7,11 +7,11 @@ export const Projects = () => {
       <p className="text-gray-500 text-xl">
         Below is a selection of recent projects that I&apos;ve worked on.
       </p>
-      <div className="grid grid-cols-project  mt-12 gap-12 justify-center">
+      <div className="grid md:grid-cols-2  grid-cols-1  mt-12 gap-12 justify-center">
         {data.map((item, idx) => {
           return (
             <div
-              className="bg-slate-100 transition-colors hover:bg-slate-200 rounded-xl p-8"
+              className="bg-slate-100 shadow-lg transition-colors  hover:bg-slate-200 rounded-xl"
               key={idx}
             >
               <ProjectCard

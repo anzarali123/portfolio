@@ -7,12 +7,12 @@ const Contact = () => {
     <div>
       <h1 className="text-3xl mb-12">Contact</h1>
       <HorizontalLine />
-      <p className="md:text-xl text-md mb-12">
+      <p className="md:text-xl text-base mb-12">
         If you&apos;d like to get in touch, you can reach out to me via any of
         the links below.I am more responsive over email and tend to be pretty
         active on LinkedIn as well.Let me know what&apos;s on your mind!
       </p>
-      <div className="grid md:grid-cols-2 gap-8 grid-cols-1 text-xl  md:text-2xl">
+      <div className="grid md:grid-cols-2 gap-8 grid-cols-1 text-sm  md:text-xl">
         <Link href="mailto:anzarali2021@gmail.com">
           <div className="justify-self-start cursor-pointer">
             <div className="title flex gap-3 items-center ">

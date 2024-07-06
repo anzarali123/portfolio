@@ -12,7 +12,7 @@ const data = [
     code: "https://github.com/anzarali123/Movie-App",
     live: "https://anzarali-movieflix.vercel.app/",
     description:
-      "A web  application which helps people find information about any movie, webseries, celebrities, IMDB rating and user can also watch movie trailer.User can register or login, add movie to their favourite list and write a review about a movie.",
+      "A web  application which helps people find information about any movie, webseries, celebrities, IMDB rating and watch trailer.",
   },
   {
     img: shopEasy,
@@ -21,7 +21,7 @@ const data = [
     code: "https://github.com/anzarali123/e-commerce-site",
     live: "https://shopeasy.onrender.com/",
     description:
-      "An end to end e-commerce platform built for influencers to sell their merchandise online.Also created an admin dashboard to keep track of the products,orders and the earning.Integrated stripe api to process the payment.",
+      "An end to end e-commerce platform built for influencers to sell their merchandise online.",
   },
 
   {
@@ -32,7 +32,7 @@ const data = [
     code: "https://github.com/anzarali123/Thunderbolt-v2",
     live: "https://thunderbolt-frontend.onrender.com/",
     description:
-      "A web application that helps people to connect and send messages to each other,also having a functionality of creating a group and send messages to multiple users.",
+      "A web application that helps people to connect,create groups and send messages to each other.",
   },
 
   {
@@ -42,7 +42,7 @@ const data = [
     code: "https://github.com/anzarali123/Cryptoverse",
     live: "https://cryptoverse-anzarali.netlify.app/",
     description:
-      "A cryptocurrency application to track the price of your favourite crypto. Coingecko API used to fetch crypto data and also integrated chartjs library to display performance of a cryptocurrency in a linear chart.",
+      "A cryptocurrency application to track the price of your favourite crypto.",
   },
 ];
 
