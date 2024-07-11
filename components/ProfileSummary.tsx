@@ -38,14 +38,14 @@ export const ProfileSummary: React.FC = () => {
           </Button>
         </Link>
       </div>
-      <div className="relative bg-transparent">
-        <div className="image-container  md:items-start bg-transparent rounded-full overflow-hidden shadow-xl transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 hover:rotate-2">
+      <div className="relative bg-transparent ">
+        <div className="image-container border-sky-500 border-spacing-5 border-4  md:items-start bg-transparent rounded-full overflow-hidden shadow-xl transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 hover:rotate-2">
           <Image
             src="/profile-pic.jpeg"
             width={100}
             height={100}
             alt="Profile Picture"
-            className="rounded-sm object-contain md:h-48 h-32 w-full"
+            className="rounded-sm object-contain md:h-48  h-32 w-full"
           />
         </div>
       </div>
