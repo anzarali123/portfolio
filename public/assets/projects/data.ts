@@ -12,18 +12,8 @@ const data = [
     code: "https://github.com/anzarali123/Movie-App",
     live: "https://anzarali-movieflix.vercel.app/",
     description:
-      "A web  application which helps people find information about any movie, webseries, celebrities, IMDB rating and watch trailer.",
+      "A web application that provides detailed information about movies, web series, celebrities, IMDb ratings, and allows users to watch movie trailers.",
   },
-  {
-    img: shopEasy,
-    title: "shopEasy",
-    builtWith: "ReactJS, Firebase, Stripe, Redux, React Router and Sass.",
-    code: "https://github.com/anzarali123/e-commerce-site",
-    live: "https://shopeasy.onrender.com/",
-    description:
-      "An end to end e-commerce platform built for influencers to sell their merchandise online.",
-  },
-
   {
     img: thunderbolt,
     title: "Thunderbolt",
@@ -32,7 +22,7 @@ const data = [
     code: "https://github.com/anzarali123/Thunderbolt-v2",
     live: "https://thunderbolt-frontend.onrender.com/",
     description:
-      "A web application that helps people to connect,create groups and send messages to each other.",
+      "A web application facilitating user connections, group creation and real-time messaging.",
   },
 
   {
@@ -42,7 +32,16 @@ const data = [
     code: "https://github.com/anzarali123/Cryptoverse",
     live: "https://cryptoverse-anzarali.netlify.app/",
     description:
-      "A cryptocurrency application to track the price of your favourite crypto.",
+      "A cryptocurrency tracking application that allows users to monitor the prices of their favorite cryptocurrencies.",
+  },
+  {
+    img: shopEasy,
+    title: "shopEasy",
+    builtWith: "ReactJS, Firebase, Stripe, Redux, React Router and Sass.",
+    code: "https://github.com/anzarali123/e-commerce-site",
+    live: "https://shopeasy.onrender.com/",
+    description:
+      "An end to end e-commerce platform built for influencers to sell their merchandise online.",
   },
 ];
 
