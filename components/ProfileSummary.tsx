@@ -27,7 +27,7 @@ export const ProfileSummary: React.FC = () => {
           <span className="text-blue-500">projects</span> below.
         </p>
         <p className="lg:text-xl text-lg leading-relaxed text-slate-600">
-          I'm currently looking for a new role. Hire me?
+          I&apos;m currently looking for a new role. Hire me?
         </p>
         <Link
           download

@@ -33,14 +33,15 @@ const Information = () => {
       <div className="flex flex-col gap-4 mb-12 leading-8 text-gray-500">
         <HorizontalLine />
         <p>
-          Hi there, I'm Anzar! learning about shipping great products, becoming
-          a better developer, and growing a career in tech.
+          Hi there, I&apos;m Anzar! learning about shipping great products,
+          becoming a better developer, and growing a career in tech.
         </p>
         <p>
           I am a software developer with a passion for problem-solving and
           creating impactful solutions. My programming journey began during my
           undergraduate studies, where I built a solid foundation in technology
-          . I hold a Bachelor's degree in Electronics and Communication from{" "}
+          . I hold a Bachelor&apos;s degree in Electronics and Communication
+          from{" "}
           <Link
             className="hover:underline text-blue-500"
             href="https://lnct.ac.in/"
