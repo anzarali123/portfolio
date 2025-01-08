@@ -34,15 +34,6 @@ const data = [
     description:
       "A cryptocurrency tracking application that allows users to monitor the prices of their favorite cryptocurrencies.",
   },
-  {
-    img: shopEasy,
-    title: "shopEasy",
-    builtWith: "ReactJS, Firebase, Stripe, Redux, React Router and Sass.",
-    code: "https://github.com/anzarali123/e-commerce-site",
-    live: "https://shopeasy.onrender.com/",
-    description:
-      "An end to end e-commerce platform built for influencers to sell their merchandise online.",
-  },
 ];
 
 export default data;
