@@ -31,7 +31,7 @@ export const ProfileSummary: React.FC = () => {
         </p>
         <Link
           download
-          href="https://drive.google.com/file/d/1FI_8XVdx2q-3vKIJXPVgBXKpwQhBO89l/view?usp=sharing"
+          href="https://drive.google.com/file/d/126qO8iN3T3a_LYB2CPxIQmxuuBoyDzQH/view?usp=sharing"
           className="w-full"
           target="_blank"
         >
