@@ -4,6 +4,11 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
+        hostname: "assets.lmnl.app",
+        pathname: "/icons/**",
+      },
+      {
+        protocol: "https",
         hostname: "s3.amazonaws.com",
         pathname: "/aerchain-assets/**",
       },

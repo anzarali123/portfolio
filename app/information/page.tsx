@@ -1,32 +1,47 @@
+"use client";
 import { HorizontalLine } from "@/components/HorizontalLine";
 import Image from "next/image";
 import Link from "next/link";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+
+const timelineData = [
+  {
+    company: "Liminal Custody",
+    logo: "https://assets.lmnl.app/icons/liminal-email-logo.png",
+    website: "https://liminalcustody.com/",
+    role: "Software Engineer, Full Stack",
+    duration: "Sep 2025 – Present",
+    location: "Hyderabad, India",
+    description:
+      "Working on the backend of a wallet infrastructure platform used by banks and enterprises. My work spans cross-chain swap integrations, transaction signing flows, EVM speed-up logic, and contributing to the blockchain parser and MPC signer service.",
+  },
+  {
+    company: "Aerchain",
+    logo: "https://s3.amazonaws.com/aerchain-assets/aerchain_dark.png",
+    website: "https://www.aerchain.io/",
+    role: "Software Development Engineer I, Full Stack",
+    duration: "Aug 2024 – Aug 2025",
+    location: "Bengaluru, India",
+    description:
+      "Worked on a B2B procurement platform as a full-stack engineer. Built RESTful APIs, a real-time vendor auction flow using WebSockets, and frontend components across procurement modules including invoices, POs, RFQs, and requisitions.",
+  },
+  {
+    company: "Xtranet Technologies",
+    logo: "https://xtranetindia.com/assets/img/xtranet-technologiespvt-ltd-logo.png",
+    website: "https://xtranetindia.com/",
+    role: "React.js Developer",
+    duration: "Feb 2023 – Jul 2024",
+    location: "Bhopal, India",
+    description:
+      "Started my career here as a React.js developer. Built modules for an HR Management System and Time & Attendance portal, and contributed to the Srinagar Smart City project under the Government of India.",
+  },
+];
 
 const Information = () => {
-  const timelineData = [
-    {
-      company: "AERCHAIN",
-      logo: "https://s3.amazonaws.com/aerchain-assets/aerchain_dark.png",
-      role: "Full Stack Developer",
-      duration: "August 2024 - Present",
-      location: "Bengaluru, India",
-      description: [
-        "Working as a Full Stack Developer, involved in developing both frontend and backend features for our AI-powered procurement platform. My role includes designing user-friendly interfaces and implementing robust RESTful APIs by leveraging ReactJS, Node.js, PostgreSQL and other web technologies.",
-        "Writing clean, maintainable code and continuously learning to meet the evolving needs of users and the business.",
-      ],
-    },
-    {
-      company: "Xtranet Technologies",
-      logo: "https://xtranetindia.com/assets/img/xtranet-technologiespvt-ltd-logo.png",
-      role: "ReactJS Developer",
-      duration: "Feb 2023 - July 2024",
-      location: "Bhopal, India",
-      description: [
-        "I worked on developing key modules for projects like the HR Management System, Time and Attendance portals, and the Srinagar Smart City project.I built features to simplify HR tasks, improve employee location tracking, and streamline attendance management using ReactJS and other web technologies, ensuring smooth functionality and reliable performance. In the Srinagar Smart City project, I contributed to automating services like tax payments and grievance handling to make operations more efficient and user-friendly.",
-        "Throughout these projects, I focused on writing clean and maintainable code, learning from challenges, and delivering practical solutions.",
-      ],
-    },
-  ];
   return (
     <div className="mx-8">
       <h1 className="text-3xl ">About Me</h1>
@@ -39,16 +54,8 @@ const Information = () => {
         <p>
           I am a software developer with a passion for problem-solving and
           creating impactful solutions. My programming journey began during my
-          undergraduate studies, where I built a solid foundation in technology
-          . I hold a Bachelor&apos;s degree in Electronics and Communication
-          from{" "}
-          <Link
-            className="hover:underline text-blue-500"
-            href="https://lnct.ac.in/"
-          >
-            Lakshmi Narain College of Technology, Bhopal
-          </Link>
-          , completed in 2021.
+          undergraduate studies, where I built a solid foundation in technology.
+          I hold a Bachelor&apos;s degree in Electronics and Communication, completed in 2021.
         </p>
 
         <p>
@@ -63,67 +70,66 @@ const Information = () => {
           m also quite active on LinkedIn.
         </p>
       </div>
+
       <h1 className="text-3xl">Career Highlights</h1>
       <HorizontalLine />
-      <div className="relative mt-8">
-        <div className="border-l-4 border-gray-300 absolute h-full left-8"></div>
+
+      <VerticalTimeline lineColor="#e5e7eb">
         {timelineData.map((item, index) => (
-          <div
+          <VerticalTimelineElement
             key={index}
-            className="flex items-start mb-12 relative"
-            style={{ marginLeft: index % 2 === 0 ? "8px" : "0px" }}
-          >
-            {/* Company Logo */}
-            <div className="w-24 h-24 bg-white p-2 rounded-2xl shadow-md flex justify-center items-center">
-              <a
-                href={
-                  item.company === "AERCHAIN"
-                    ? "https://www.aerchain.io/"
-                    : "https://xtranetindia.com/"
-                }
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+            date={`${item.duration} · ${item.location}`}
+            iconStyle={{ background: "#fff", boxShadow: "0 0 0 4px #e5e7eb" }}
+            icon={
+              <div className="flex items-center justify-center w-full h-full p-1.5">
                 <Image
                   src={item.logo}
-                  width={48}
-                  height={48}
+                  width={32}
+                  height={32}
                   alt={`${item.company} logo`}
+                  className="object-contain"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = "none";
+                    target.parentElement!.innerHTML =
+                      '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>';
+                  }}
                 />
-              </a>
-            </div>
-
-            {/* Information */}
-            <div className="ml-8 flex-1">
-              <h2 className="text-xl font-semibold">
+              </div>
+            }
+            contentStyle={{
+              background: "#fff",
+              boxShadow: "0 4px 6px -1px rgb(0 0 0 / 0.07)",
+              border: "1px solid #e5e7eb",
+              borderRadius: "12px",
+              padding: "1.5rem",
+            }}
+            contentArrowStyle={{ borderRight: "7px solid #e5e7eb" }}
+          >
+            <div className="flex items-start justify-between gap-2 flex-wrap">
+              <div>
                 <a
-                  href={
-                    item.company === "AERCHAIN"
-                      ? "https://www.aerchain.io/"
-                      : "https://xtranetindia.com/"
-                  }
+                  href={item.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xl font-semibold text-blue-500 hover:underline"
+                  className="text-lg font-bold text-blue-500 hover:underline leading-tight"
                 >
                   {item.company}
                 </a>
-              </h2>
-              <p className="text-gray-600 italic">{item.role}</p>
-              <p className="text-gray-500 text-sm">
-                {item.duration} | {item.location}
-              </p>
-              <div className="text-gray-500 mt-2">
-                {item.description.map((desc, idx) => (
-                  <p className="mb-2" key={idx}>
-                    {desc}
-                  </p>
-                ))}
+                <p className="text-gray-700 font-medium mt-0.5">{item.role}</p>
               </div>
+              {index === 0 && (
+                <span className="text-xs bg-green-50 text-green-600 border border-green-200 px-2 py-0.5 rounded-full font-medium">
+                  Current
+                </span>
+              )}
             </div>
-          </div>
+            <p className="mt-3 text-gray-500 text-sm leading-relaxed">
+              {item.description}
+            </p>
+          </VerticalTimelineElement>
         ))}
-      </div>
+      </VerticalTimeline>
 
       <h1 className="text-3xl">Principles</h1>
       <HorizontalLine />
@@ -158,7 +164,7 @@ const Information = () => {
       <HorizontalLine />
       <div className="bg-slate-200 py-8 px-4 border-l-4 border-l-black leading-8 text-gray-500">
         {
-          "Put a ding in the universe. Your time is limited, so don’t waste it living someone else’s life. Don’t be trapped by dogma, which is living with the results of other people’s thinking."
+          "Put a ding in the universe. Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma, which is living with the results of other people's thinking."
         }{" "}
         — <span className="text-blue-500">Steve Jobs</span>
       </div>
